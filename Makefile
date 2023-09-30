@@ -100,7 +100,7 @@ $(admin_osmjson):
 	curl 'https://overpass-api.de/api/interpreter' \
 		--data-urlencode '$(QUERY)' > $(admin_osmjson)
 
-cat /$(admin_osmjson)
+cat $(admin_osmjson)
 
 $(admin_geojson):
 	docker run \
